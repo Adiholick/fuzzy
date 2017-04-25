@@ -24,6 +24,7 @@ if($tampil = mysqli_fetch_array($sql)){
     $rangka = $tampil['rangka'];
     $emisi = $tampil['emisi'];
     $status = $tampil['status'];
+    $tanggal = $tampil['tanggal'];
 
     $username = $_SESSION['username'];
 }
@@ -75,6 +76,14 @@ if($tampil = mysqli_fetch_array($sql)){
                 <div class="col_full">
                     <table class="table table-hover">
                         <tbody>
+                        <tr>
+                            <td>
+                                <label>Tanggal Pengujian :</label>
+                            </td>
+                            <td>
+                                <?php echo $tanggal; ?>
+                            </td>
+                        </tr>
                         <tr class="active">
                             <td>
                                 <label>Merek :</label>

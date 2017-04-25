@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2017 at 10:39 AM
+-- Generation Time: Apr 25, 2017 at 07:02 AM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -40,32 +40,35 @@ CREATE TABLE IF NOT EXISTS `data_kendaraan` (
   `rem` int(10) DEFAULT NULL,
   `rangka` int(10) DEFAULT NULL,
   `emisi` int(10) DEFAULT NULL,
-  `status` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+  `status` varchar(100) DEFAULT NULL,
+  `tanggal` date DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `data_kendaraan`
 --
 
-INSERT INTO `data_kendaraan` (`id`, `merek`, `pembuat`, `tipe`, `jenis`, `chassis_no`, `engine_no`, `model`, `letak_motor`, `silinder`, `rem`, `rangka`, `emisi`, `status`) VALUES
-(1, 'Carry', 'Suzuki', 'Angkutan Barang', 'Angkutan Pedesaan', 'XX000X', '987567887678', 'OHV', 'FR', '4', 65, 56, 50, 'Tidak'),
-(2, 'Honda', 'Honda Indonesia', 'Angkutan Penumpang', 'Angkutan Kota', 'X0978919XABAE', 'JFGHJ78UHGJII2', 'OHV', 'FR', '4', 44, 76, 70, 'Peremajaan'),
-(3, 'BMW', 'BMW', 'Angkutan Barang', 'Angkutan Kota', '789YHJI89UYH', '098UYIJNHU8U', 'DOHC', 'FR', '4', 80, 87, 77, 'Tidak'),
-(4, 'BMW', 'BMW', 'Angkutan Barang', 'Angkutan Kota', '789YHJI89UYH', '098UYIJNHU8U', 'DOHC', 'FR', '4', 78, 70, 80, 'Tidak'),
-(5, 'BMW', 'BMW', 'Angkutan Barang', 'Angkutan Kota', '789YHJI89UYH', '098UYIJNHU8U', 'DOHC', 'FR', '4', 66, 60, 40, 'Tidak'),
-(6, 'BMW', 'BMW', 'Angkutan Barang', 'Angkutan Kota', '789YHJI89UYH', '098UYIJNHU8U', 'DOHC', 'FR', '4', 66, 67, 80, 'Tidak'),
-(7, 'BMW', 'BMW', 'Angkutan Barang', 'Angkutan Kota', '789YHJI89UYH', '098UYIJNHU8U', 'DOHC', 'FR', '4', 50, 88, 77, 'Peremajaan'),
-(9, 'Rubicon', 'Rubicon Corp', 'Angkutan Penumpang', 'Angkutan Kota', '6677TUYU61188', '887GJOOO98272112', 'DOHC', 'FR', '5', 78, 77, 80, 'Tidak'),
-(10, 'Rubicon', 'Rubicon Corp', 'Angkutan Penumpang', 'Angkutan Kota', '6677TUYU61188', '887GJOOO98272112', 'DOHC', 'FR', '5', 78, 77, 70, 'Peremajaan'),
-(11, 'Rubicon', 'Rubicon Corp', 'Angkutan Penumpang', 'Angkutan Kota', '6677TUYU61188', '887GJOOO98272112', 'DOHC', 'FR', '5', 78, 77, 80, 'Tidak'),
-(12, 'Rubicon', 'Rubicon Corp', 'Angkutan Penumpang', 'Angkutan Kota', '6677TUYU61188', '887GJOOO98272112', 'DOHC', 'FR', '5', 78, 77, 80, 'Tidak'),
-(13, 'Sonic', 'SONIC Indonesia', 'Angkutan Barang', 'Angkutan Kota', '678908HGVGHY678', '98YUI87YGBNJU78', 'DOHC', 'FR', '4', 60, 69, 57, 'Tidak'),
-(14, 'BMW i3', 'PT BWM Indonesa', 'Angkutan Penumpang', 'Angkutan Pedesaan', '987GUHIJOIU8IOI8U', '9IJNU8IJHGYU8', 'DOHC', 'FF', '4', 76, 67, 80, 'Tidak'),
-(15, 'Jazz', 'Honda Indonesia', 'Angkutan Penumpang', 'Angkutan Pedesaan', '9876678IJHBYUJ', '987YHJIUHBHU8U', 'OHV', 'FF', '4', 50, 67, 66, 'Peremajaan'),
-(16, 'Jazz', 'Honda Indonesia', 'Angkutan Penumpang', 'Angkutan Pedesaan', '9876678IJHBYUJ', '987YHJIUHBHU8U', 'OHV', 'FF', '4', 50, 67, 66, 'Peremajaan'),
-(17, 'Carry', 'suzuki', 'Angkutan Penumpang', 'Angkutan Kota', 'WDQ2344', 'DCSD2312', 'DOHC', 'FF', '4', 40, 50, 66, 'Peremajaan'),
-(18, 'Carry', 'suzuki', 'Angkutan Penumpang', 'Angkutan Kota', 'WDQ2344', 'DCSD2312', 'DOHC', 'FF', '4', 20, 50, 66, 'Tidak'),
-(19, 'Civic T8', 'Honda Indonesia', 'Angkutan Penumpang', 'Angkutan Pedesaan', 'qw9820', '98u02970', 'DOHC', 'FR', '2', 70, 70, 70, 'Layak');
+INSERT INTO `data_kendaraan` (`id`, `merek`, `pembuat`, `tipe`, `jenis`, `chassis_no`, `engine_no`, `model`, `letak_motor`, `silinder`, `rem`, `rangka`, `emisi`, `status`, `tanggal`) VALUES
+(1, 'Carry', 'PT. Suzuki Indonesia', 'Angkutan Barang', 'Angkutan Pedesaan', 'UU77810Q9S80', '8877711189872', 'OHV', 'FR', '4', 65, 56, 50, 'Peremajaan', '2017-04-24'),
+(2, 'HR-V Prestige', 'Honda Indonesia', 'Angkutan Penumpang', 'Angkutan Kota', 'UUTR99987AAUTR', '8871653999111UOQ', 'DOHC', 'FR', '4', 44, 76, 70, 'Layak', NULL),
+(3, 'BMW TI8', 'PT. BMW Indonesia', 'Angkutan Barang', 'Angkutan Kota', '88UUIDJAOZUJ', '88726111776XX1', 'DOHC', 'FR', '4', 80, 87, 77, 'Tidak', NULL),
+(4, 'BMW I2', 'PT. BMW Indonesia', 'Angkutan Barang', 'Angkutan Kota', '789YHJI89UYH', '098UYIJNHU8U', 'DOHC', 'FR', '4', 70, 70, 70, 'Layak', NULL),
+(5, 'Grand Max', 'PT. Daihatsu Indoensia', 'Angkutan Barang', 'Angkutan Kota', '888HJHUAYA7820AJ', '88772J2JAUISMXO', 'DOHC', 'FR', '4', 66, 60, 40, 'Tidak', NULL),
+(6, 'BMW I3', 'PT. BMW Indonesia', 'Angkutan Barang', 'Angkutan Kota', '98890AJA02W92Y', '8872618SDUAIDJ', 'DOHC', 'FR', '4', 66, 67, 80, 'Tidak', NULL),
+(7, 'Xenia 2011', 'PT. Daihatsu Indonesia', 'Angkutan Barang', 'Angkutan Kota', '789YHJI89UYH', '098UYIJNHU8U', 'DOHC', 'FR', '4', 50, 88, 77, 'Tidak', NULL),
+(9, 'Rubicon', 'Rubicon Corp', 'Angkutan Penumpang', 'Angkutan Kota', '6677TUYU61188', '887GJOOO98272112', 'DOHC', 'FR', '5', 78, 77, 80, 'Tidak', '2017-04-25'),
+(10, 'Rubicon PRESTIGE', 'Rubicon Corp', 'Angkutan Penumpang', 'Angkutan Kota', 'YY887761JKLAAA', '88UUAI11190XL', 'DOHC', 'FR', '5', 78, 77, 70, 'Layak', NULL),
+(11, 'Rubicon 2017', 'Rubicon Corp', 'Angkutan Penumpang', 'Angkutan Kota', '88UYTTQQQ1111987A', '8877111909111', 'DOHC', 'FR', '5', 78, 77, 80, 'Tidak', NULL),
+(12, 'Rubicon 2011', 'Rubicon Corp', 'Angkutan Penumpang', 'Angkutan Kota', '8890AUAUW92211', '8876111AAUT8910', 'DOHC', 'FR', '5', 78, 77, 80, 'Tidak', '2017-04-25'),
+(13, 'Sonic', 'SONIC Indonesia', 'Angkutan Barang', 'Angkutan Kota', '678908HGVGHY678', '98YUI87YGBNJU78', 'DOHC', 'FR', '4', 60, 69, 57, 'Tidak', NULL),
+(14, 'BMW i3', 'PT BWM Indonesa', 'Angkutan Penumpang', 'Angkutan Pedesaan', '987GUHIJOIU8IOI8U', '9IJNU8IJHGYU8', 'DOHC', 'FF', '4', 76, 67, 80, 'Tidak', '2017-04-24'),
+(15, 'Jazz GE9', 'Honda Indonesia', 'Angkutan Penumpang', 'Angkutan Pedesaan', '9876678IJHBYUJ', '987YHJIUHBHU8U', 'OHV', 'FF', '4', 50, 67, 66, 'Layak', NULL),
+(16, 'Jazz RS 2011', 'Honda Indonesia', 'Angkutan Penumpang', 'Angkutan Pedesaan', 'UU891777AAA11', '7788Q7111A89A', 'OHV', 'FF', '4', 50, 67, 66, 'Layak', NULL),
+(17, 'Carry', 'PT. Suzuki Indonesia', 'Angkutan Penumpang', 'Angkutan Kota', '776YUAKDL88119', 'SCA1199000CCOPAUQ', 'DOHC', 'FF', '4', 40, 50, 66, 'Tidak', NULL),
+(18, 'Carry 2011', 'PT. Suzuki Indonesia', 'Angkutan Penumpang', 'Angkutan Kota', 'WQ776111OUI1', 'DSC2211098YYU', 'DOHC', 'FF', '4', 20, 50, 66, 'Tidak', '2017-04-25'),
+(19, 'Civic T8', 'Honda Indonesia', 'Angkutan Penumpang', 'Angkutan Pedesaan', '88UAIAY11187618', '876611JUS99A8A', 'DOHC', 'FR', '2', 70, 70, 70, 'Layak', '2017-04-24'),
+(20, 'Grand Max PICKUP', 'PT. Daihatsu Indonesia', 'Angkutan Barang', 'Angkutan Kota', '99888UUIO1190', '99011JJKDST11542', 'OHV', 'FF', '4', 71, 50, 70, 'Peremajaan', NULL),
+(21, 'Carry', 'Honda Indonesia', 'Angkutan Penumpang', 'Angkutan Pedesaan', '0987890OJHBGYUI', '887GJOOO98272112', 'OHV', 'RR', '4', 66, 77, 70, 'Layak', NULL);
 
 -- --------------------------------------------------------
 
@@ -172,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(250) DEFAULT NULL,
   `password` varchar(250) DEFAULT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
@@ -181,7 +184,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`id`, `username`, `fullname`, `email`, `password`, `status`) VALUES
 (1, 'admin', 'admin', 'admin', 'admin', 1),
 (2, 'adiholick', 'A Nugroho', 'adi@gmail.com', 'greentea', 1),
-(3, 'bambang', 'bambang tri', 'bamban@gmail.com', 'bambang', 1);
+(3, 'bambang', 'bambang tri', 'bamban@gmail.com', 'bambang', 1),
+(4, 'developer', 'developer', 'developer', 'developer', 1);
 
 --
 -- Indexes for dumped tables
@@ -225,7 +229,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `data_kendaraan`
 --
 ALTER TABLE `data_kendaraan`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `rule`
 --
@@ -235,7 +239,7 @@ ALTER TABLE `rule`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

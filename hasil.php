@@ -469,32 +469,35 @@
                                 echo implode(" + ",$pembagi_peremajaan) . " + ";
                                 echo implode(" + ",$pembagi_layak) . " <br>";
                                 echo "= " . $hasil_def . "<br>";
-                                echo "Kesimpulannya adalah, kondisi kendaraan ini = ";
+                                //echo "Kesimpulannya adalah, kondisi kendaraan ini = ";
 
                                 //---- Logika menentukan Hasil --- //
                                 if($min_tidak <= $hasil_def && $hasil_def <= $max_tidak ){
                                     $kondisi = "Tidak";
+                                    $warna_kondisi = "alert alert-danger";
                                 }elseif ($min_peremajaan <= $hasil_def && $hasil_def <= $min_layak){
                                     $kondisi = "Peremajaan";
+                                    $warna_kondisi = "alert alert-warning";
                                     //backup $min_layak <= $hasil_def && $hasil_def <= $max_layak
                                 }elseif($hasil_def > $min_layak){
                                     $kondisi = "Layak";
+                                    $warna_kondisi = "alert alert-success";
                                 }elseif($hasil_def < $min_layak){
                                     $kondisi = "Tidak";
+                                    $warna_kondisi = "alert alert-danger";
                                 }
-                                echo $kondisi;
+                                //echo $kondisi;
                                 echo "<br>";
 
                                 $simpan = new simpan();
 
                                 if(!empty($_POST['id_hidden'])){
-                                    //echo "HERE";
                                     $simpan->update($_POST,$kondisi,$_POST['id_hidden']);
                                 }else{
-                                    //echo "Tidak Ada";
                                     $simpan->save($_POST,$kondisi);
                                 }
                                 ?>
+                                <div class="<?php echo $warna_kondisi; ?>">Kesimpulannya adalah, kondisi kendaraan ini <strong><?php if($kondisi=="Tidak"){echo "Tidak Layak";}else{echo $kondisi;} ?></strong></div>
                             </div>
                         </div>
                     </div>

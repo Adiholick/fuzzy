@@ -16,8 +16,9 @@ class simpan{
         $rem = mysqli_real_escape_string($con, $data['sistem_pengereman']);
         $rangka = mysqli_real_escape_string($con, $data['rangka_landasan']);
         $emisi = mysqli_real_escape_string($con, $data['gas_emisi']);
+        $tanggal = mysqli_real_escape_string($con, $data['tanggal']);
 
-        $query = mysqli_query($con, "INSERT INTO `data_kendaraan`(`id`,`merek`,`pembuat`,`tipe`,`jenis`,`chassis_no`,`engine_no`,`model`,`letak_motor`,`silinder`,`rem`,`rangka`,`emisi`,`status`) VALUES ('NULL','$merek','$pembuat','$tipe','$jenis','$chassis','$engine','$model','$letak_motor','$silinder','$rem','$rangka','$emisi','$status')");
+        $query = mysqli_query($con, "INSERT INTO `data_kendaraan`(`id`,`merek`,`pembuat`,`tipe`,`jenis`,`chassis_no`,`engine_no`,`model`,`letak_motor`,`silinder`,`rem`,`rangka`,`emisi`,`status`,`tanggal`) VALUES ('NULL','$merek','$pembuat','$tipe','$jenis','$chassis','$engine','$model','$letak_motor','$silinder','$rem','$rangka','$emisi','$status','$tanggal')");
         return $query;
     }
 
@@ -37,8 +38,9 @@ class simpan{
         $rem = mysqli_real_escape_string($con, $data['sistem_pengereman']);
         $rangka = mysqli_real_escape_string($con, $data['rangka_landasan']);
         $emisi = mysqli_real_escape_string($con, $data['gas_emisi']);
+        $tanggal = mysqli_real_escape_string($con, $data['tanggal']);
 
-        $query = mysqli_query($con, "UPDATE `data_kendaraan` SET `merek`='$merek',`pembuat`='$pembuat',`tipe`='$tipe',`jenis`='$jenis',`chassis_no`='$chassis',`engine_no`='$engine',`model`='$model',`letak_motor`='$letak_motor',`silinder`='$silinder',`rem`='$rem',`rangka`='$rangka',`emisi`='$emisi',`status`='$status' WHERE `id`='$id'");
+        $query = mysqli_query($con, "UPDATE `data_kendaraan` SET `merek`='$merek',`pembuat`='$pembuat',`tipe`='$tipe',`jenis`='$jenis',`chassis_no`='$chassis',`engine_no`='$engine',`model`='$model',`letak_motor`='$letak_motor',`silinder`='$silinder',`rem`='$rem',`rangka`='$rangka',`emisi`='$emisi',`status`='$status',`tanggal`='$tanggal' WHERE `id`='$id'");
         return $query;
     }
 }

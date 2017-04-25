@@ -116,6 +116,7 @@ if(isset($_GET['edit'])){
                     <div class="col_full">
                         <label>Merek :</label>
                         <input id="id_hidden" name="id_hidden" type="hidden" class="form-control" value="<?php echo $id; ?>">
+                        <input id="tanggal" name="tanggal" type="hidden" class="form-control" value="<?php echo date("Y-m-d"); ?>">
                         <input id="merek_kendaraan" name="merek_kendaraan" class="form-control" placeholder="Merek" value="<?php echo $merek; ?>">
                     </div>
 

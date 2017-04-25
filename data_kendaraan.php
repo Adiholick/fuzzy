@@ -70,6 +70,7 @@
                         <table id="datatable1" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                             <tr>
+                                <th>Tanggal</th>
                                 <th>Merek</th>
                                 <th>Nama Pembuat</th>
                                 <th>Tipe Kendaraan</th>
@@ -94,6 +95,7 @@
                             while($tampil = mysqli_fetch_array($query)){
                                 ?>
                                 <tr>
+                                    <td><?php echo $tampil['tanggal']; ?></td>
                                     <td><?php echo $tampil['merek']; ?></td>
                                     <td><?php echo $tampil['pembuat']; ?></td>
                                     <td><?php echo $tampil['tipe']; ?></td>
@@ -113,6 +115,9 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+                <div class="col_full">
+                    <a class="button button-3d button-black nomargin fright" href="print_all.php">Cetak Laporan</a>
                 </div>
 
                 <div class="clear"></div>
