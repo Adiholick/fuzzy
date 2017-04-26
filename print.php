@@ -8,7 +8,7 @@ if (empty($_SESSION['username'])){
     session_destroy();
     header('Location: login.php');
 }
-$id = $_GET['id'];
+$id = mysqli_real_escape_string($con, $_GET['id']);
 $sql = mysqli_query($con, "SELECT * FROM `data_kendaraan` where `id`='$id'");
 if($tampil = mysqli_fetch_array($sql)){
     $merek = $tampil['merek'];
@@ -70,7 +70,9 @@ if($tampil = mysqli_fetch_array($sql)){
             <div class="container clearfix">
                 <div class="heading-block center">
                     <h1>Hasil Uji Kelayakan Kendaraan</h1>
-                    <span>Dinas Perhubungan Kota Serang</span>
+                    <span>DINAS PERHUBUNGAN<br>
+                    KOMUNIKASI DAN INFORMATIKA<br>
+                    KOTA SERANG</span>
                 </div>
 
                 <div class="col_full">
@@ -202,13 +204,13 @@ if($tampil = mysqli_fetch_array($sql)){
                 }
                 ?>
                 <div class="fright">
-                    Mengetahui Penguji
+                    KEPALA PENGUJI
                     <br><br><br><br>
                     <table class="table table-hover">
                         <tbody>
-                        <tr><?php echo $nama; ?></tr>
+                        <tr>BAYU ADI PRATAMA</tr>
                         <tr>
-                            <td>NIP. <?php echo $nip; ?></td>
+                            <td></td>
                         </tr>
                         </tbody>
                     </table>

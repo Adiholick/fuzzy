@@ -14,7 +14,7 @@ $sql = mysqli_query($con, "SELECT * FROM `data_kendaraan`");
 <head>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="SemiColonWeb" />
+    <meta name="author" content="Adiholick" />
 
     <!-- Stylesheets
     ============================================= -->
@@ -50,8 +50,10 @@ $sql = mysqli_query($con, "SELECT * FROM `data_kendaraan`");
 
             <div class="container clearfix">
                 <div class="heading-block center">
-                    <h1>Laporan Uji Kelayakan Kendaraan</h1>
-                    <span>Dinas Perhubungan Kota Serang</span>
+                    <h1>LAPORAN UJI KELAYAKAN KENDARAAN</h1>
+                    <span>DINAS PERHUBUNGAN<br>
+                    KOMUNIKASI DAN INFORMATIKA<br>
+                    KOTA SERANG</span>
                 </div>
 
                 <div class="col_full">
@@ -106,15 +108,16 @@ $sql = mysqli_query($con, "SELECT * FROM `data_kendaraan`");
                     $nip = $tampil_sign['id'];
                 }
                 ?>
-                <div class="fright">
-                    Mengetahui<br>
-                    Kepala Divisi Pengujian Kendaraan
+                <div class="fright center">
+                    KEPALA DINAS PERHUBUNGAN<br>
+                    KOMUNIKASI DAN INFORMATIKA<br>
+                    KOTA SERANG
                     <br><br><br><br>
                     <table class="table table-hover">
                         <tbody>
-                        <tr>Ir. Djoko Raharja</tr>
+                        <tr>ACHMAD MUJIMI, S.Pd, M.Pd</tr>
                         <tr>
-                            <td>NIP. 1122190256</td>
+                            <td>NIP. 19620719 198410 1 002</td>
                         </tr>
                         </tbody>
                     </table>
