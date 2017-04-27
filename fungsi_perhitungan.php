@@ -51,14 +51,14 @@ class perhitungan{
         }
     }
     function sedang($nilai,$min_rem,$max_rem,$rata_rem){
-        if($nilai <= $min_rem || $nilai >= $max_rem){
-            return 0;
+        if($rata_rem <= $nilai && $nilai <= $max_rem){
+            return 1;
         }elseif ($min_rem <= $nilai && $nilai <= $rata_rem){
             $pembagi = $rata_rem - $min_rem;
             $hitung = ($nilai - $min_rem) / $pembagi;
             return $hitung;
-        }elseif ($rata_rem <= $nilai && $nilai <= $max_rem){
-            return 1;
+        }elseif ($nilai <= $min_rem || $nilai >= $max_rem){
+           return 0;
         }
     }
 }
